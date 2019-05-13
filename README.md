@@ -1,4 +1,13 @@
-##Git branch specification
+# Multiple websites derived from the same trunk
+
+## Launch the project
+
+```
+npm i
+npm run dev
+```
+
+## Git branch specification
 
 ```
 master
