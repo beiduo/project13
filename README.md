@@ -7,6 +7,12 @@ npm i
 npm run dev
 ```
 
+## Build the project
+
+```
+npm run build
+```
+
 ## Git branch specification
 
 ```
