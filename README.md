@@ -2,7 +2,7 @@
 
 the project uses VUE but not necessarily, VUE might not be the best choice for this.
 
-the goal is to manage and maintance a huge number of websites that are derived from same trunk, with less or more customerized feature or design in each individual website
+the goal is to manage and maintance a huge number of websites that are derived from same trunk, with less or more customized feature or design in each individual website
 
 ## Launch the project
 
