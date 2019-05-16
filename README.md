@@ -1,23 +1,23 @@
-# Multiple websites derived from the same trunk
+# 多站点前端项目
 
-the project uses VUE but not necessarily, VUE might not be the best choice for this.
+这个项目使用使用VUE，但是并非必须，VUE可能也并非最佳选择。
 
-the goal is to manage and maintance a huge number of websites that are derived from same trunk, with less or more customized feature or design in each individual website
+目标是开发、管理和维护大量由同一个主干衍生出来，并且经过不同程度的客制化开发的网站或者web app
 
-## Launch the project
+## 运行开发环境
 
 ```
 npm i
 npm run dev
 ```
 
-## Build the project
+## 项目打包
 
 ```
 npm run build
 ```
 
-## Git branch specification
+## Git分支规范
 
 ```
 master
@@ -34,25 +34,27 @@ trunk
             sample_bug_
 ```
 
-## Coding specification
+## 目录和文件规范
+
+### 目录及文件名的定义
+
+目录和文件名必须描述该类、函数、模块、变量等的性质和用途，使用英文，避免出现***1， ***2这样易于混淆的命名
 
 ### Vue components
 
-each vue components, except App.vue, should wrapped in one directory, and separated to three files: index.vue, index.js, index.scss.
+除了App.vue之外，每个VUE组件，都是一个单独的文件夹，分为三个文件：index.vue, index.js, index.scss
 
-the name of the directory should be exactly the same as the component class which is exported in index.js. and follow pascal naming convention.
+文件夹的名字必须与index.js中export的component类的名字完全一致，并遵循Pascal式命名。
 
-- container/ contains page container
-- components/ contains common components
-- views/ components linked to each route. the name of the component should be as same as the route name, (e.g. the component used for route "admin/dashboard" should be named as "AdminDashboard")
+- container/ page容器
+- components/ 通用组件
+- views/ 与路由相关联的组件，每个组件都对应一个路由，并且在命名上保持一致, (例如：路由"admin/dashboard"引用的views组件需要被命名为"AdminDashboard")
 
 ### lib
 
-lib contains common functions and constants, follow lower camel case convention.
+lib文件夹是通用的函数以及常量库，使用首字母小写的驼峰式命名
 
 ### store
 
-store contains state data models and operations of these models. create an individual model for each resource and follow lower camel case convention (e.g. users.js, user.js, ...)
-
-keep the name related to its usage.
+store内是应用的状态数据的模型及其操作使用逻辑，每个数据对象模型都创建一个单独的model，并使用首字母小写的驼峰式命名。如：users.js, user.js
 
