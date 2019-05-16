@@ -42,13 +42,13 @@ trunk
 
 ### Vue components
 
-除了App.vue之外，每个VUE组件，都是一个单独的文件夹，分为三个文件：index.vue, index.js, index.scss
+除了App.vue之外，每个VUE组件，都是一个单独的文件夹，分为三个文件：index.vue, index.js, index.scss。文件夹的名字必须与index.js中export的component类的名字完全一致，并遵循Pascal式命名。
 
-文件夹的名字必须与index.js中export的component类的名字完全一致，并遵循Pascal式命名。
+如果组件自身包含一个或者多个子组件，命名为***.vue/js/scss，并且放在父组件相同的文件夹，文件名必须与js文件中export的component类的名字完全一致，并遵循Pascal式命名。
 
 - container/ page容器
 - components/ 通用组件
-- views/ 与路由相关联的组件，每个组件都对应一个路由，并且在命名上保持一致, (例如：路由"admin/dashboard"引用的views组件需要被命名为"AdminDashboard")
+- views/ 与路由相关联的组件，每个组件都对应一个路由，并且在命名上保持一致, (例如：路由"admin/dashboard"引用的views组件需要被命名为"AdminDashboard")。
 
 ### lib
 
