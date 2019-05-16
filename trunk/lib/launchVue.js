@@ -10,11 +10,15 @@ axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
 Vue.config.productionTip = false;
 
 const launchVue = function (input = {}) {
+
+    Vue.prototype.siteConstants = typeof input.siteConstants === 'object' ? input.siteConstants : {};
+
     return new Vue({
         router: input.router || router,
         store: input.store || store,
         render: h => h(input.App || App),
     }).$mount('#app');
+
 };
 
 export default launchVue;
